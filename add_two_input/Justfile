@@ -1,0 +1,8 @@
+default: (assemble "add_two_input.asm") run
+
+assemble target:
+    @mkdir -p build/
+    @gcc -x assembler {{target}} -o ./build/out
+
+run:
+    @./build/out
